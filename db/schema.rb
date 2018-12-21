@@ -10,9 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_21_062807) do
+ActiveRecord::Schema.define(version: 2018_12_21_075117) do
 
   create_table "reactions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "to_user_id", null: false
+    t.integer "from_user_id", null: false
+    t.integer "status", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
